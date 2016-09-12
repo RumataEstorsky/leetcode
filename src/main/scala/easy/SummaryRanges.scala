@@ -5,7 +5,7 @@ import scala.collection.mutable.ArrayBuffer
 /**
  * Created by rumata on 8/14/15.
  */
-class SummaryRanges {
+object SummaryRanges {
 
   def summaryRanges(nums: Iterable[Int]) = {
     def makeRangeString(start: Int, end: Int) = if(start == end) start.toString else s"$start->$end"
@@ -22,11 +22,6 @@ class SummaryRanges {
     result += makeRangeString(start, nums.last)
 
     result.toList
-  }
-
-  def test = {
-    assert(summaryRanges(List(0, 1, 2, 4, 5, 7)) == List("0->2", "4->5", "7"))
-    assert(summaryRanges(List(1, 2, 3, 5, 6, 7, 8)) == List("1->3", "5->8"))
   }
 
 }

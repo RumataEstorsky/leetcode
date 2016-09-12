@@ -3,8 +3,7 @@ package medium
 //
 // TODO tests!!!
 //
-class DivideTwoIntegers {
-  test
+object DivideTwoIntegers {
 
   def divide(dividend: Int, divisor: Int) =
     if(divisor == 0) Integer.MAX_VALUE
@@ -22,15 +21,4 @@ class DivideTwoIntegers {
 
       if(negative) -result else result
   }
-
-  def test = {
-    assert(divide(10, 10) == 1)
-    assert(divide(-10, -10) == 1)
-    assert(divide(-10, 10) == -1)
-    assert(divide(10, -10) == -1)
-    assert(divide(100, 4) == 25)
-    assert(divide(100, 0) == Integer.MAX_VALUE)
-    assert(divide(33, 11) == 3)
-  }
-
 }

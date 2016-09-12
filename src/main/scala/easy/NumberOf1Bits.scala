@@ -3,7 +3,7 @@ package easy
 /**
  * Created by rumata on 8/7/15.
  */
-class NumberOf1Bits {
+object NumberOf1Bits {
 
   def hammingWeight(n: Int) = {
     var result = 0
@@ -15,14 +15,6 @@ class NumberOf1Bits {
       i = i >> 1
     }
     result
-  }
-
-  def test = {
-    assert(hammingWeight(44) == 3)
-    assert(hammingWeight(11) == 3)
-    assert(hammingWeight(0) == 0)
-    assert(hammingWeight(1) == 1)
-    assert(hammingWeight(99999999) == 19)
   }
 
 

@@ -3,7 +3,7 @@ package easy
 /**
  * Created by rumata on 8/19/15.
  */
-class RomanToInteger {
+object RomanToInteger {
 
   val roman = Map('I' -> 1, 'V' -> 5, 'X' -> 10, 'L' -> 50, 'C' -> 100, 'D' -> 500, 'M' -> 1000)
 
@@ -29,16 +29,5 @@ class RomanToInteger {
     if(isNeedSubstract(e.head, e.last)) acc - roman(e.head) else acc + roman(e.head)
   }
 
-
-  def test = {
-    assert(romanToInt3("V") == 5)
-    assert(romanToInt3("XIII") == 13)
-    assert(romanToInt3("CCVII") == 207)
-    assert(romanToInt3("MLXVI") == 1066)
-    assert(romanToInt3("MCMIV") == 1904)
-    assert(romanToInt3("MCMLIV") == 1954)
-    assert(romanToInt3("MMXIV") == 2014) // Olympic Games in Sochi
-    println(romanToInt3("MMXIV"))
-  }
 
 }
